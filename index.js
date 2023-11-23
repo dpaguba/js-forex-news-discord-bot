@@ -43,3 +43,5 @@ for (const file of commandFiles) {
         console.log(`[WARNING]: The command at ${filePath} is missing a required "data" or "execute" property`);
     }
 }
+
+client.login(token)
