@@ -1,6 +1,6 @@
 require("dotenv").config
 const fs = require("node:fs")
-const path = ("node:path")
+const path = require("node:path")
 
 const { DISCORD_TOKEN: token } = process.env
 
