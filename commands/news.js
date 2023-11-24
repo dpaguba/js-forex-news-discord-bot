@@ -11,15 +11,11 @@ module.exports = {
             const jsonString = fs.readFileSync('commands/economic_calendar.json', 'utf-8');
             const jsonData = JSON.parse(jsonString);
 
-            for (news of jsonData) {
-                if (news.impact === "High") {
-                    answer += "🔴  "
-                } else {
-                    answer += "🟠  "
-                }
-
-                answer += `${news.date} - ${news.event} - ${news.currency}\n`
-            }
+            jsonData.map((data) => {
+                answer += (data.impact === "High") ?
+                    `🔴  ${data.date} - ${data.event} - ${data.currency}\n` :
+                    `🟠  ${data.date} - ${data.event} - ${data.currency}\n`
+            })
 
             await interaction.reply(answer)
 
