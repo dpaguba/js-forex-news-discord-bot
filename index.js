@@ -3,7 +3,7 @@ const fs = require("node:fs")
 const path = require("node:path")
 // const mogoose = require("mongoose")
 
-const { DISCORD_TOKEN: token, MONGODB_SRV: database } = process.env
+const { DISCORD_TOKEN: token } = process.env
 
 const { Client, GatewayIntentBits, Collection } = require("discord.js")
 // const { default: mongoose } = require("mongoose")

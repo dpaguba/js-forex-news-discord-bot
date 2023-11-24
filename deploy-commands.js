@@ -7,8 +7,6 @@ const {
 } = process.env;
 const fs = require("node:fs");
 
-console.log(token);
-
 const commands = [];
 const commandFiles = fs
     .readdirSync("./commands")
