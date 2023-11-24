@@ -2,6 +2,7 @@ require("dotenv").config()
 const fs = require("node:fs")
 const path = require("node:path")
 // const mogoose = require("mongoose")
+const { fetchDataAndWriteToFile } = require('./fetchData')
 
 const { DISCORD_TOKEN: token } = process.env
 
@@ -57,4 +58,5 @@ for (const file of commandFiles) {
 //     .catch((error) => {
 //         console.log(error);
 //     })
-// client.login(token)
+client.login(token)
+fetchDataAndWriteToFile()
