@@ -9,7 +9,7 @@ function fetchDataAndWriteToFile() {
 
     const options = {
         hostname: 'financialmodelingprep.com',
-        port: process.env.PORT || 3000,
+        port: 3000,
         path: `/api/v3/economic_calendar?from=${formatDate(currentDate)}&to=${formatDate(currentDate)}&apikey=${apikey}`,
         method: 'GET'
     };
