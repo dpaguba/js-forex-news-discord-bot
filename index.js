@@ -1,13 +1,13 @@
 require("dotenv").config()
 const fs = require("node:fs")
 const path = require("node:path")
-const mogoose = require("mongoose")
+// const mogoose = require("mongoose")
 
 const { DISCORD_TOKEN: token, MONGODB_SRV: database } = process.env
 
 const { Client, GatewayIntentBits, Collection } = require("discord.js")
-const { default: mongoose } = require("mongoose")
-const { error } = require("node:console")
+// const { default: mongoose } = require("mongoose")
+// const { error } = require("node:console")
 
 const client = new Client({
     intents: [
@@ -47,14 +47,14 @@ for (const file of commandFiles) {
     }
 }
 
-mongoose.connect(database,
-    {
-        useUnifiedTopology: true,
-    })
-    .then(() => {
-        console.log("Connected to the databse!")
-    })
-    .catch((error) => {
-        console.log(error);
-    })
-client.login(token)
+// mongoose.connect(database,
+//     {
+//         useUnifiedTopology: true,
+//     })
+//     .then(() => {
+//         console.log("Connected to the databse!")
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     })
+// client.login(token)

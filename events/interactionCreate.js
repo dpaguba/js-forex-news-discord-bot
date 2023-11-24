@@ -7,18 +7,18 @@ module.exports = {
         if (!interaction.isChatInputCommand()) return;
 
         // get user information 
-        let profileData
-        try {
-            profileData = await profileModule.findOne({ userId: interaction.user.id })
-            if (!profileData) {
-                profileData = await profileModule.create({
-                    userId: interaction.user.id,
-                    serverId: interaction.guild.id,
-                })
-            }
-        } catch (error) {
-            console.log(error);
-        }
+        // let profileData
+        // try {
+        //     profileData = await profileModule.findOne({ userId: interaction.user.id })
+        //     if (!profileData) {
+        //         profileData = await profileModule.create({
+        //             userId: interaction.user.id,
+        //             serverId: interaction.guild.id,
+        //         })
+        //     }
+        // } catch (error) {
+        //     console.log(error);
+        // }
 
         const command = interaction.client.commands.get(interaction.commandName);
 
