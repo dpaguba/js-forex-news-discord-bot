@@ -1,5 +1,5 @@
 const { Events } = require("discord.js");
-const profileModule = require("../models/profileSchema")
+// const profileModule = require("../models/profileSchema")
 
 module.exports = {
     name: Events.InteractionCreate,
